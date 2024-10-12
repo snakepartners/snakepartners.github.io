@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram MiniApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #0088cc;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #006699;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Telegram MiniApp</h1>
+        <button id="close">Close MiniApp</button>
+    </div>
+
+    <script>
+        // Инициализация мини-приложения Telegram WebApp
+        Telegram.WebApp.ready();
+
+        // Действие при нажатии на кнопку для закрытия мини-приложения
+        document.getElementById('close').addEventListener('click', function() {
+            Telegram.WebApp.close();
+        });
+    </script>
+</body>
+</html>
