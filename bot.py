@@ -13,7 +13,7 @@ from telegram.ext import (
 async def start(update: Update, context):
     # Создаем кнопку, которая открывает MiniApp
     keyboard = [
-        [InlineKeyboardButton(text="Open MiniApp", web_app=WebAppInfo(url="https://snakepartners.github.io/l"))]
+        [InlineKeyboardButton(text="Open MiniApp", web_app=WebAppInfo(url="https://snakepartners.github.io/"))]
     ]
     
     reply_markup = InlineKeyboardMarkup(keyboard)
